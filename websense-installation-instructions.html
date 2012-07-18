@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>Installation Instructions</title>
+	</head>
+	<body>
+		<h1>WebSense Installation</h1>
+		<i>Draft 23 July 2011</i>
+		<p>
+			Instructions for installing Websense windows installation 23 July 2011 (MacOS and Linux are similar).
+		</p>
+		<h2>Downloads Required</h2>
+		<h4>Apache and Posgresql Support</h4>
+		<ol>
+			<li>
+				BitNami WAPP stack (get 5.3.6-0 not 1.2-5) from
+				http://bitnami.org/stack/wappstack, or
+			</li>
+			<li>
+				PostgresSQL with StackBuilder to install Apache and pgAdmin
+				(postgresql-9.0.4-1-windows.exe) from http://www.enterprisedb.com/products-services-training/pgdownload#windows
+			</li>
+			<li>
+				<i>Maybe</i> Firefox (if you don't have a web browser) from http://www.mozilla.com/
+			</li>
+		</ol>
+		<h4>WebSense Application and Database</h4>
+		<ol>
+			<li>
+				websense3.23july.zip from ftp.csse.uwa.edu.au/WebSense (user
+				wsnetwork, passwd W5ne+wrk)
+			</li>
+			<li>
+				websense23july.sql.zip from ftp.csse.uwa.ed.ua/WebSense
+			</li>
+			<li>
+				<i>Maybe</i> JPgraph from http://jpgraph.net/download/ but try the
+				version already in the websense3 directory first.
+			</li>
+		</ol>
+		<h2>Installation</h2>
+		<p>
+			Use the one-click installers for the Apache/Postgres systems.
+			The following choices are suggested.
+		</p>
+		<p>
+			Installation dir: C:\Program Files\PostgreSQL\9.0
+			<br>
+			Password: testuser
+			<br>
+			Port: 5432
+			<br>
+			StackBuilder choice at end of installation select:
+			<br>
+			Web Development > ApachePHP v2.2.16-5.3.3-1
+			<br>
+			Web Development > phpPgAdmin v5.0.2-1
+			<br>
+		</p>
+		<p>
+			On-a-stick installation is possible, but it has proved safer to install
+			all systems on the main C drive.
+			If any problems arise then see the installation guides:
+			<br>
+			http://www.enterprisedb.com/resources-community/pginst-guide (for
+			postgres)
+			or
+			<br>
+			http://bitnami.org/files/stacks/wappstack/5.3.6-0/wappstack.pdf
+			(for bitnami)
+		</p>
+		<h4>WebSense Application</h4>
+		<p>
+			First test the Apache server by opening a web browser and point to
+			http://localhost:8080/index.php
+			You should see EnterpriseDB ... server is up and running
+		</p>
+		<p>
+			Unzip the websense3 directory in the php docs directory:
+			<br>
+			"C:\Program Files\BitNami WAPPStack\apache2\htdocs\"
+			or
+			<br>
+			"C:\Program Files\PostgreSQL\EnterpriseDB-ApachePhp\apache\www\"
+
+			Use the version of
+			jpgraph included in the websense3 directory which includes a truetype
+			subdirectory so no external font links are needed.
+		</p>
+		<p>
+			<b>To test your application installation</b> open a web browser and go to:
+			<br>
+			http://localhost/websense3/testphp.php, and also
+			<br>
+			http://localhost/websense3/testgraph.php
+		</p>
+		<p>
+			<i>TODO: for Bitnami and Firefox
+			the Graph quality is bad, but they are drawn (png image 1600x1000 scaled
+			54%)</i>
+		</p>
+		<h4>WebSense Database</h4>
+		<p>
+			Next install Postgresql and populate a database with Websense data.
+
+			To use the PGadmin system open a web browser and go to
+			http://localhost:8080/phpPGAdmin/ (postgres) or
+			http://127.0.0.1/phppgadmin/ (bitnami)
+			which is also
+			http://localhost/phppgadmin/
+		</p>
+		<ol>
+			<li>
+				<b>Login</b> (postgres, testuser) and then
+			</li>
+			<li>
+				<b>Create database</b>
+				<br>
+				Name: websense
+				<br>
+				Template: template0
+				<br>
+				Encoding: WIN1252
+			</li>
+			<li>
+				<b>Create Two Roles (to manage data)</b>
+				<br>
+				mo (passwd mo) Yes Yes Yes Yes Yes No limit Never
+				<br>
+				webreader (passwd webreader) No No No No Yes 25 Never
+			</li>
+			<li>
+				<b>Logout</b> of phpadmin
+			</li>
+		</ol>
+		<p>
+			Finally upload some data.  First copy from ftp.csse.uwa.edu.au
+			and unzip
+			websense22july.sql.zip (make sure the sql file is at top level directory)
+			then type following at the command line:
+		</p>
+		<p>
+			"C:\Program Files\BitNami WAPPStack\postgresql\bin\psql.exe" -h
+			localhost -p 5432 -U postgres -d websense -f websense22july.sql
+			<br>
+			passwd: testuser as before, or use
+		</p>
+		<p>
+			"C:\Program Files\PostgreSQL\9.0\bin\psql.exe" -h localhost -p 5432 -U
+			postgres -d websense -f websense22july.sql
+		</p>
+		<p>
+			You can also use psql in future to browse or update the database.
+			Just leave off the -f (file input) flag.
+		</p>
+		<p>
+			<b>Backup the database</b> after future changes using pg_dump:
+		</p>
+		<p>
+			"C:\Program Files\BitNami WAPPStack\postgresql\bin\pg_dump.exe" -f websenseDATE.sql -p 5432 -U postgres websense
+		</p>
+		<p>
+			Link websense to your new database by
+			opening the file opendb.php in the websense directory
+			(E:\Program Files\PostgreSQL\EnterpriseDB-ApachePhp\apache\www\)
+			and checking that the pg_connect parameters match your installation:
+		</p>
+		<p>
+			pg_connect("host=localhost port=5432 dbname=websense user=webreader
+			password=webreader")
+		</p>
+		<p>
+			<b>To test your database installation</b> open a web browser and point to
+
+			http://localhost:8080/websense3/testdb.php
+
+			or http://localhost:8080/websense3/testdb.php
+
+			Only seems to work in firefox not explorer??
+		</p>
+		<h2>Finally</h2>
+		<p>
+			Run websense by choosing:
+		</p>
+		<p>
+			http://localhost/websense3/
+		</p>
+		<p>
+			Viel Gl&uuml;ck!
+		</p>
+	</body>
+</html>
