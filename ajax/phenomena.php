@@ -11,7 +11,7 @@ require '../localization.php';
 require 'get_params.php';
 require '../opendb.php';
 
-$phenomena_query = 'SELECT messg.description, messg.unit, messg.comments FROM
+$phenomena_query = 'SELECT messg.description, messg.unit, messg.minimum, messg.maximum, messg.comments FROM
 							(SELECT messr.messgroesse_id FROM funkstation AS funk
 							 JOIN sensor AS sens ON (funk.standort_id = ANY($1) AND funk.id = sens.station_id)
 							 JOIN messreihe AS messr ON (sens.id = messr.sensor_id)
@@ -29,13 +29,13 @@ $html = '
 <table>
 	<thead>
 		<tr>
-			<th>'.$messages['phenomena.table.phenomenon'].'</th><th>'.$messages['phenomena.table.unit'].'</th><th>'.$messages['phenomena.table.calibration'].'</th>
+			<th>'.$messages['phenomena.table.phenomenon'].'</th><th>'.$messages['phenomena.table.unit'].'</th><th>'.$messages['phenomena.table.minimum'].'</th><th>'.$messages['phenomena.table.maximum'].'</th><th>'.$messages['phenomena.table.calibration'].'</th>
 		</tr>
 	</thead>
 	<tbody>';
 
 do {
-	$html .= '<tr><td>' . $phenomenon['description'] . '</td><td>' . $phenomenon['unit'] . '</td><td>' . $phenomenon['comments'] . '</td></tr>';
+	$html .= '<tr><td>'.$phenomenon['description'].'</td><td>'.$phenomenon['unit'].'</td><td>'.$phenomenon['minimum'].'</td><td>'.$phenomenon['maximum'].'</td><td>'.$phenomenon['comments'].'</td></tr>';
 } while($phenomenon = pg_fetch_assoc($phenomena_result));
 
 $html .= '

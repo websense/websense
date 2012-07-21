@@ -1,7 +1,7 @@
 <div id="headline">
 	<div id="logos">
 		<a href="http://www.hs-mannheim.de/"><img src="images/hs.png" alt="<?php echo $messages['banner.logo.hsma.alt'] ?>" title="<?php echo $messages['banner.logo.hsma.title'] ?>"></a>
-		<a href="http://www.uwa.edu.au/"><img src="images/uwa.png" alt="<?php echo $messages['banner.logo.uwa.alt'] ?> title="<?php echo $messages['banner.logo.uwa.title'] ?>"></a>
+		<a href="http://www.uwa.edu.au/"><img src="images/uwa.png" alt="<?php echo $messages['banner.logo.uwa.alt'] ?>" title="<?php echo $messages['banner.logo.uwa.title'] ?>"></a>
 	</div>
 	<h1 id="sitecaption"><?php echo $messages['banner.title'] ?></h1>
 </div>

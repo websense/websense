@@ -138,7 +138,7 @@ function createOpenStreetMap(mapCanvas, nodes, heatRadiusMeters, minHeat, maxHea
  */
 function initializeOSMOverview(mapCanvas, nodes) {
 	// Precached Marker for overview-maps:
-	initializeOSMOverview.redIcon = initializeOSMOverview.redIcon || new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker.png', new OpenLayers.Size(21, 25), new OpenLayers.Pixel(-(21 / 2), -25));
+	initializeOSMOverview.redIcon = initializeOSMOverview.redIcon || new OpenLayers.Icon('script/openlayers/img/marker.png', new OpenLayers.Size(21, 25), new OpenLayers.Pixel(-(21 / 2), -25));
 
 	var map = createOpenStreetMap(mapCanvas);
 	// Overview maps just need markers:
@@ -156,7 +156,7 @@ function initializeOSMOverview(mapCanvas, nodes) {
  */
 function initializeOSMHeat(mapCanvas, nodes, unit) {
 	// Precached Marker for heat-maps:
-	initializeOSMHeat.blueIcon = initializeOSMHeat.blueIcon || new OpenLayers.Icon('http://www.openlayers.org/dev/img/marker-blue.png', new OpenLayers.Size(10.5, 12.5), new OpenLayers.Pixel(-(10.5 / 2), -12.5));
+	initializeOSMHeat.blueIcon = initializeOSMHeat.blueIcon || new OpenLayers.Icon('script/openlayers/img/marker-blue.png', new OpenLayers.Size(10.5, 12.5), new OpenLayers.Pixel(-(10.5 / 2), -12.5));
 
 	var map = createOpenStreetMap(mapCanvas);
 

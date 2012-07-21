@@ -1,153 +1,192 @@
 body {
-	font-family: "Segoe UI", "Lucida Grande", Verdana, Geneva, Lucida, Arial, Helvetica, sans-serif;
+	font-family: "Segoe UI", "Lucida Grande", Verdana, Geneva, Lucida, Arial,
+		Helvetica, sans-serif;
 	color: #383838;
 	font-size: 0.9em;
 	background-color: #fff;
 	padding: 0.1em 0.6em 0.6em 0.6em;
 	margin: 0.6em;
 }
+
 table {
 	text-align: left;
 	border-collapse: collapse;
 }
-th, td {
+
+th,td {
 	border-width: 1px;
 	padding: 2px;
 	border-style: solid;
 	border-color: gray;
 }
+
 thead tr {
 	background-color: #fb2;
 }
+
 thead tr th {
 	text-align: center;
 }
+
 tbody tr:nth-child(even) {
 	background-color: #ddd;
 }
+
 label {
 	display: block;
 }
+
 h1 {
 	text-shadow: #fb2 1px 1px 0;
 }
-h1, h4 {
+
+h1,h4 {
 	color: #003a6b;
 	background-color: transparent;
 	margin: 0;
 }
-h4, h5 {
+
+h4,h5 {
 	padding: 0.4em 0 0.4em 0;
 	margin: 0;
 	font-weight: bold;
 }
+
 h5 {
 	font-size: 103%;
 }
+
 h4 {
 	font-size: 110%;
 }
+
 img {
 	border: 0;
 }
+
 .spaced-listing li {
 	padding-bottom: 1em;
 }
+
 #menu h5 {
 	font-size: 90%;
 	text-align: center;
 }
+
 .ui-tabs-nav {
 	height: 2.5em;
 }
+
 .ui-tabs {
 	font-size: 0.8em;
 	padding-bottom: 10px;
 }
+
 .ui-tabs-selected {
 	height: 27px;
 }
+
 .ui-widget-header {
 	border: none;
 	background: none;
 	color: black;
 }
-.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default {
+
+.ui-state-default,.ui-widget-content .ui-state-default,.ui-widget-header .ui-state-default
+	{
 	border: 1px solid black;
 	background: #049 none;
 	color: #fff;
 }
+
 #network_info div.ui-tabs-panel {
 	background: none;
 	/*width: 100%;*/
 }
-.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited {
+
+.ui-state-default a,.ui-state-default a:link,.ui-state-default a:visited
+	{
 	color: #fff;
 }
-.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus {
+
+.ui-state-hover,.ui-widget-content .ui-state-hover,.ui-widget-header .ui-state-hover,.ui-state-focus,.ui-widget-content .ui-state-focus,.ui-widget-header .ui-state-focus
+	{
 	background: #0059C8 none;
 	font-weight: bold;
 	color: #fff;
 }
-.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active {
+
+.ui-state-active,.ui-widget-content .ui-state-active,.ui-widget-header .ui-state-active
+	{
 	background: #fff none;
 	color: #049;
 }
-.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited {
+
+.ui-state-active a,.ui-state-active a:link,.ui-state-active a:visited {
 	color: #049;
 }
-.ui-datepicker {
-/*Show OVER maps. Not beneath.*/
+
+.ui-datepicker { /*Show OVER maps. Not beneath.*/
 	z-index: 10000 !important;
 }
-.ui-datepicker .ui-datepicker-prev-hover, .ui-datepicker .ui-datepicker-next-hover {
+
+.ui-datepicker .ui-datepicker-prev-hover,.ui-datepicker .ui-datepicker-next-hover
+	{
 	background-color: transparent;
 	border: none;
 }
+
 #observed_locations {
 	padding: 0;
 	margin: 0;
 }
+
 #observed_locations fieldset ul {
 	list-style: none;
 	margin: 0;
 	padding: 0;
 }
+
 #observed_locations fieldset {
 	margin: 10px 0 0 0;
 	padding: 0 0 0.3em 0;
 	border: 1px solid gray;
 }
+
 #observed_locations input[type="submit"] {
 	margin: 0.3em 0 0 0;
 	padding: 0;
 	width: 100%;
 }
+
 #observed_locations h5 {
 	padding: 0.6em 0 0.1em 0;
 }
 
-#locale_container{
+#locale_container {
 	overflow: auto;
 	font-size: 0.8em;
 }
-#locale_list{
+
+#locale_list {
 	list-style: none;
 	margin: 0;
 	float: right;
 }
-#locale_list li{
+
+#locale_list li {
 	float: right;
 	padding-left: 0.2em;
 }
 
-
-#navcontainer ul, #navcontainer ul li a {
+#navcontainer ul,#navcontainer ul li a {
 	background: #049 none;
 }
+
 #navcontainer ul li a:hover {
 	background: #0059C8 none;
 }
+
 #navcontainer ul {
 	padding: 0;
 	margin: 0;
@@ -156,9 +195,11 @@ img {
 	width: 100%;
 	height: auto;
 }
+
 #navcontainer ul li {
 	display: inline;
 }
+
 #navcontainer ul li a {
 	padding: 0.2em 1em;
 	color: white;
@@ -166,6 +207,7 @@ img {
 	float: left;
 	border-right: 1px solid #fff;
 }
+
 #navcontainer {
 	font-weight: bold;
 	/*overflow:hidden forces the browser to contain the floating list inside the navcontainer.*/
@@ -173,10 +215,12 @@ img {
 	margin: 0;
 	padding: 10px 0 10px 0;
 }
+
 #network_container {
 	margin: 0;
 	padding: 0;
 }
+
 #menu {
 	position: fixed;
 	margin: 0;
@@ -185,10 +229,20 @@ img {
 	font-size: .8em;
 	width: 180px;
 }
+
+.country_heading {
+	cursor: pointer;
+}
+
+.country_heading:HOVER {
+	text-decoration: underline;
+}
+
 .trialgroup {
 	list-style: none;
 	margin-left: 0;
 }
+
 #network_info {
 	text-align: left;
 	overflow: hidden;
@@ -198,21 +252,25 @@ img {
 	/*	height: 520px;*/
 	background: none;
 }
+
 #map_canvas {
 	width: 580px;
 	height: 380px;
 }
+
 #info {
 	width: 570px;
 	padding: 3px;
 	margin: 10px 0 0 0;
 	/*overflow: hidden;*/
 }
+
 dl {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
 }
+
 dt {
 	width: 11em;
 	font-weight: bold;
@@ -221,73 +279,89 @@ dt {
 	margin: 0;
 	padding: 0 .5em 0 0;
 }
+
 dd {
 	margin: 0;
 	padding: 0;
 }
+
 dt:after {
 	content: ":";
 }
-#graphs_container, #heat_map_container {
+
+#graphs_container,#heat_map_container {
 	/*Works around a css quirk that lets floated block-elements appear outside their parent-elements.*/
 	overflow: auto;
 }
+
 #heat_form {
 	width: 18.4em;
 }
+
 #heat_result {
 	margin-left: 19.5em;
 	width: 580px;
 }
+
 #heatmap_canvas {
 	width: 100%;
 	height: 380px;
 }
-#spectrum {
-	/*height of the scale-image.*/
+
+#spectrum { /*height of the scale-image.*/
 	line-height: 39px;
 	overflow: hidden;
 	padding-top: 1em;
 	/*The color spectrum is initially hidden. It gets displayed via jQuery on successful heatmap-creation.*/
 	visibility: hidden;
 }
-#spectrum_min, #spectrum img, #spectrum_max {
+
+#spectrum_min,#spectrum img,#spectrum_max {
 	float: right;
 }
-#spectrum_min, #spectrum_max {
+
+#spectrum_min,#spectrum_max {
 	font-weight: bold;
 }
+
 #spectrum img {
 	margin: 0 0.5em 0 0.5em;
 }
+
 #spectrum label {
 	margin: 0;
 	padding: 0;
 	float: left;
 }
+
 #spectrum label input {
 	margin: 0 0.2em 0 0;
 }
+
 #local_image {
 	/*Note: The image inside the map_canvas has to be uniquely identified, else these settings will mess with the images on the google map.*/
 	max-width: 100%;
 	max-height: 100%;
 }
+
 #headline {
 	position: relative;
 	overflow: hidden;
 	text-align: left;
 	border-bottom: 2px solid #fb2;
 }
+
 #logos {
 	float: right;
 }
+
 #sitecaption {
 	position: absolute;
 	bottom: 0;
 	color: #049;
 	font-size: 23px;
 }
+
 #event_blog {
 	width: 600px;
 	margin: 0;
@@ -296,58 +370,73 @@ dt:after {
 	list-style: none;
 	overflow: auto;
 }
-#heat_form, #graphing_form {
+
+#heat_form,#graphing_form {
 	float: left;
 }
+
 #fixed_interval_rbtn {
 	float: left;
 }
+
 #fixed_interval_section {
 	margin: 0 0 0 24px;
 	padding-top: 4px;
 }
+
 #date_interval_table {
 	margin-top: 0.4em;
 	/*Hidden initially, is made visible by selection of corresponding radio button (above)fixed_interval_btn).*/
 	visibility: collapse;
 }
+
 .inline-label {
 	display: inline;
 }
+
 ul {
 	list-style: circle;
 }
+
 .selected-trial {
 	background-color: #ddd;
 }
-.rounded-corners, .info-box, fieldset {
+
+.rounded-corners,.info-box,fieldset {
 	-moz-border-radius: 10px;
 	-webkit-border-radius: 10px;
 	border-radius: 10px;
 }
-.rounded-corners, .info-box {
+
+.rounded-corners,.info-box {
 	border: 2px #fb2 solid;
 }
+
 .rounded-corners {
 	background-color: #049;
 	display: inline;
 	color: white;
 	padding: 0 1em 0 1em;
 }
+
 .info-box {
 	padding: 0 3px 3px 3px;
 	margin: 0;
 }
+
 .info-box p {
 	padding-top: 3px;
 	margin: 0;
 }
-.recent_mmt{
+
+.recent_mmt {
 	background-color: green;
 }
-.old_mmt{
+
+.old_mmt {
 	background-color: yellow;
 }
-.outdated_mmt{
+
+.outdated_mmt {
 	background-color: red;
 }

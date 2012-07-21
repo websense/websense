@@ -12,9 +12,6 @@
  *
  * The jQueryUI-framework is used to display the tabbed area and also for the datepicker-popups in the "graphs" and "heat map" forms.
  *
- * Both are hosted by google, so their size should not matter too much as they may be already cached by the users browser
- * and also googles servers are pretty fast.
- *
  * The clientside-scripts (javascript) can be found in the "scripts" folder.
  * 
  * @package main
@@ -26,13 +23,14 @@ require 'localization.php';
 <html>
 	<head>
 		<meta charset="utf-8">
-		<script src="script/jquery-1.6.2.min.js"></script>
-		<script src="script/jqueryui-1.8.16.min.js"></script>
-		<link rel="stylesheet" href="jquery-ui.css">
+		<link rel="stylesheet" href="script/jqueryui/jquery-ui-1.8.21.custom.css">
 		<link rel="stylesheet" href="simplestyle.css">
+		<script src="script/jquery-1.7.2.min.js"></script>
+		<script src="script/jqueryui/jquery-ui-1.8.21.custom.min.js"></script>
+		<script src="localization_client.php"></script>
 		<script src="//maps.google.com/maps/api/js?sensor=false"></script>
 		<script src="script/googlemapscripts.js"></script>
-		<script src="script/OpenLayers.js"></script>
+		<script src="script/openlayers/OpenLayers.js"></script>
 		<script src="script/openstreetmapscripts.js"></script>
 		<script src="script/util.js"></script>
 		<script src="script/change_locale.js"></script>

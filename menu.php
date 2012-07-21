@@ -25,8 +25,8 @@
 		</div>
 		<fieldset>
 			<ul>
-				<li>
-					<h5>' . $last_country . '</h5>
+				<li class="country_group">
+					<h5 class="country_heading">' . $last_country . '</h5>
 					<ul class="trialgroup">
 						<li>
 							<label>
@@ -43,8 +43,8 @@
 			$menu .= '
 					</ul>
 				</li>
-				<li>
-					<h5>' . $current_country . '</h5>
+				<li class="country_group">
+					<h5 class="country_heading">' . $current_country . '</h5>
 					<ul class="trialgroup">';
 			$last_country = $current_country;
 		}
@@ -62,8 +62,6 @@
 					</ul>
 				</li>
 			</ul>
-			<input type="button" value="'.$messages['menu.buttons.checkall'].'" id="check_all">
-			<input type="button" value="'.$messages['menu.buttons.uncheckall'].'" id="uncheck_all">
 		</fieldset>
 		<input type="submit" value="'.$messages['menu.buttons.submit'].'">
 	</form>';

@@ -337,11 +337,25 @@ $(function() {
 		trialMenu.find("input:checkbox[name='trials[]']:first").attr('checked', true);
 	}
 
-	// Register clicks on check/unckeck all buttons:
-	$('#check_all').click(function() {trialMenu.find(':checkbox').attr('checked', true);
+	// Register clicks on check/uncheck all button:
+	trialMenu.find(".country_group").each(function(){
+		var countryGroup = $(this);
+		var heading = countryGroup.find(".country_heading");
+		
+		heading.click(function(){
+			var allTrialBoxes = countryGroup.find("input:checkbox[name='trials[]']");
+			var checkedTrialBoxes = countryGroup.find("input:checkbox[name='trials[]']:checked");
+			
+			if(allTrialBoxes.length == checkedTrialBoxes.length){
+				// All checked -> uncheck all.
+				allTrialBoxes.attr('checked', false);
+			} else{
+				// Some checked -> check all.
+				allTrialBoxes.attr('checked', true);
+			}
+		});
 	});
-	$('#uncheck_all').click(function() {trialMenu.find(':checkbox').attr('checked', false)
-	});
+
 	// Register change in location/site via submit-button-click:
 	trialMenu.submit(changeLocation);
 	// Load initial network information for default selected trial:

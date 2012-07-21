@@ -122,7 +122,7 @@ if($outputtype == 'graph') {
 	$ndays =        pg_fetch_object($num_days_result) -> num_days;
 }
 
-// Replace all spaces in the trialnames with underscores and then stich them together with -.
+// Replace all spaces in the trialnames with underscores and then stitch them together with -.
 // Makes a useful .csv- file-name.
 $name_query = 'SELECT string_agg(translate(description, \' \',\'_\' ), \'-\')
 	  AS trialname FROM standort WHERE id = ANY($1);';
