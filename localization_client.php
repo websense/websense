@@ -6,11 +6,10 @@
  * @package main
  */
 require 'localization.php';
+require_once 'util.php';
 
-// Disable browser caching. This is how drupal does it.
-header("Expires: Sun, 19 Nov 1978 05:00:00 GMT");
-header("Last-Modified: " . gmdate("D, d M Y H:i:s") . " GMT");
-header("Cache-Control: store, no-cache, must-revalidate, post-check=0, pre-check=0");
+// This file must not be cached, else the cached localization would be used.
+disableClientCaching();
 ?>
 
 var messages = <?php echo json_encode($client_messages); ?>;

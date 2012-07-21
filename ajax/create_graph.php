@@ -34,6 +34,9 @@ if(!containsKeys($_GET, array('outputtype', 'sensors'))) {
 	die($messages['create.graph.error.generic']);
 }
 
+// Graphs and CSV should be bookmarkable. Clients caching the output would make that impossible.
+disableClientCaching();
+
 //output graph or csv text
 $outputtype = $_GET['outputtype'];
 $sensormessreiheid = $_GET['sensors'];
