@@ -32,5 +32,8 @@
 		<li>
 			<a href="contact.php"><?php echo $messages['banner.navigation.contact'] ?></a>
 		</li>
+		<li>
+			<a href="help.php"><?php echo $messages['banner.navigation.help'] ?></a>
+		</li>
 	</ul>
 </div>
