@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=7" />
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      <title>Online-Hilfe für WebSense</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.77.0" />
+      <link rel="home" href="index.html" title="Online-Hilfe für WebSense" />
+      <link rel="next" href="Introduction.html" title="Einführung" /><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-1148";
+            var language = "de";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Ergebnisse';
+            txt_enter_at_least_1_char = "Sie müssen mindestens ein Zeichen eingeben.";
+            txt_browser_not_supported = "JavaScript ist in Ihrem Browser abgeschaltet. Bitte schalten Sie JavaScript an, damit diese Seiten vollständig dargestellt werden.";
+            txt_please_wait = "Bitte warten Sie. Die Suche ist im Gange ...";
+            txt_results_for = "Ergebnisse für: ";
+        </script><link rel="shortcut icon" href="../test.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="../common/css/positioning.css" />
+      <link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css" /><style type="text/css">
+noscript{
+      font-weight:bold;
+}
+input {
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+.folder {
+    display: block;
+    height: 22px;
+    padding-left: 20px;
+    background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+}
+span.contentsTab {
+    padding-left: 20px;
+    background: url(../common/images/toc-icon.png) no-repeat 0 center;
+}
+span.searchTab {
+    padding-left: 20px;
+    background: url(../common/images/search-icon.png) no-repeat 0 center;
+}
+
+/* Overide jquery treeview's defaults for ul. */
+.treeview ul {
+    background-color: transparent;
+    margin-top: 4px;
+}		
+#webhelp-currentid {
+    background-color: #D8D8D8 !important;
+}
+.treeview .hover { color: black; }
+.filetree li span a { text-decoration: none; font-size: 12px; color: #517291; }
+
+/* Override jquery-ui's default css customizations. These are supposed to take precedence over those.*/
+.ui-widget-content {
+    border: 0px; 
+    background: none; 
+    color: none;     
+}
+.ui-widget-header {
+    color: #e9e8e9;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #bbc4c5;
+    border-top: 4px solid #e5e5e5;
+    border: medium none;
+    background: #F4F4F4; /* old browsers */
+    background: -moz-linear-gradient(top, #F4F4F4 0%, #E6E4E5 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F4F4), color-stop(100%,#E6E4E5)); /* webkit */    
+    font-weight: none;
+}
+.ui-widget-header a { color: none; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+border: none; background: none; font-weight: none; color: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: black; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: none; background: none; font-weight: none; color: none; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: none; background: none; font-weight: none; color: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+    color: black; text-decoration: none; 	
+    background: #C6C6C6; /* old browsers */
+    background: -moz-linear-gradient(top, #C6C6C6 0%, #D8D8D8 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C6C6C6), color-stop(100%,#D8D8D8)); /* webkit */
+    -webkit-border-radius:15px; -moz-border-radius:10px;
+    border: 1px solid #f1f1f1;
+}    
+.ui-corner-all { border-radius: 0 0 0 0; }
+
+.ui-tabs { padding: .2em;}
+.ui-tabs .ui-tabs-nav li { top: 0px; margin: -2px 0 1px; text-transform: uppercase; font-size: 10.5px;}
+.ui-tabs .ui-tabs-nav li a { padding: .25em 2em .25em 1em; margin: .5em; text-shadow: 0 1px 0 rgba(255,255,255,.5); }
+        </style><script type="text/javascript" src="../common/browserDetect.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery-1.4.2.min.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js">
+         <!----></script><script type="text/javascript" src="search/l10n.js">
+         <!----></script><script type="text/javascript" src="search/htmlFileList.js">
+         <!----></script><script type="text/javascript" src="search/htmlFileInfoList.js">
+         <!----></script><script type="text/javascript" src="search/nwSearchFnt.js">
+         <!----></script><script type="text/javascript" src="search/stemmers/de_stemmer.js">
+         <!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js">
+         <!----></script><script type="text/javascript" src="search/index-2.js">
+         <!----></script><script type="text/javascript" src="search/index-3.js">
+         <!----></script></head>
+   <body>
+      <div id="header"><a target="_blank" href="#"><img style="margin-right: 2px; height: 59px; padding-right: 25px; padding-top: 8px" align="right" src="../common/images/test.png" alt=" Documentation" /></a><h1>Online-Hilfe für WebSense<br /> 
+         </h1>
+         <div id="navheader">
+            <!---->
+            <table class="navLinks">
+               <tr>
+                  <td><a id="showHideButton" href="javascript:showHideToc();" class="pointLeft" tabindex="5" title="Hide TOC tree">Sidebar
+                                                    </a></td>
+                  <td> 
+                                                         |
+                                                         <a accesskey="n" class="navLinkNext" tabindex="5" href="Introduction.html">Weiter</a></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="content">
+         <noscript>JavaScript ist in Ihrem Browser abgeschaltet. Bitte schalten Sie JavaScript an, damit diese Seiten vollständig dargestellt
+            werden.
+         </noscript>
+         <!---->
+         <div xml:lang="de" class="book">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h1 class="title"><a id="UserGuide"></a>Online-Hilfe für WebSense
+                     </h1>
+                  </div>
+                  <div>
+                     <h2 class="subtitle"> - Für die Software-Version 1.0 - 
+                        		
+                     </h2>
+                  </div>
+               </div>
+               <hr />
+            </div>
+         </div><script type="text/javascript" src="../common/main.js">
+            <!----></script><div class="navfooter">
+            <hr />
+            <table width="100%" summary="Navigation footer">
+               <tr>
+                  <td width="40%" align="left"> </td>
+                  <td width="20%" align="center"> </td>
+                  <td width="40%" align="right"> <a accesskey="n" href="Introduction.html">Weiter</a></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="sidebar">
+         <div id="leftnavigation" style="padding-top:3px;">
+            <div id="tabs">
+               <ul>
+                  <li><a href="#treeDiv" style="outline:0;" tabindex="1"><span class="contentsTab">Inhalt</span></a></li>
+                  <li><a href="#searchDiv" style="outline:0;" tabindex="1" onclick="doSearch()"><span class="searchTab">Suchen</span></a></li>
+               </ul>
+               <div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;" /><div id="ulTreeDiv" style="display:none">
+                     <ul id="tree" class="filetree">
+                        <li><span class="file"><a href="Introduction.html" tabindex="1">Einführung</a></span><ul>
+                              <li><span class="file"><a href="ch01s01.html" tabindex="1">Über WebSense</a></span></li>
+                              <li><span class="file"><a href="ch01s02.html" tabindex="1">Voraussetzungen</a></span></li>
+                              <li><span class="file"><a href="ch01s03.html" tabindex="1">Über diese Online-Hilfe</a></span></li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="UserInterface.html" tabindex="1">Benutzeroberfläche von WebSense</a></span><ul>
+                              <li><span class="file"><a href="Overview.html" tabindex="1">Überblick</a></span></li>
+                              <li><span class="file"><a href="Mainmenu.html" tabindex="1">Hauptmenü</a></span></li>
+                              <li><span class="file"><a href="Menu2.html" tabindex="1">Menü 2</a></span></li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="Instructions.html" tabindex="1">Anleitungen</a></span><ul>
+                              <li><span class="file"><a href="Create.Heatmap.html" tabindex="1">Eine Heatmap erzeugen</a></span><ul>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e462" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e530" tabindex="1">Heatmap-Optionen</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e592" tabindex="1">Beispiel einer Heatmap</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e614" tabindex="1">Weiterführene Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="Create.Graph.html" tabindex="1">Einen Graphen erzeugen</a></span><ul>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e637" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e705" tabindex="1">Graphen-Optionen</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e765" tabindex="1">Beispiel eines Graphen</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e778" tabindex="1">Weiterführende Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s03.html" tabindex="1">Neue Sensordaten in die Datenbank hochladen</a></span><ul>
+                                    <li><span class="file"><a href="ch03s03.html#d0e799" tabindex="1">Voraussetzungen:</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s04.html" tabindex="1">Ein Back-Up der Daten durchführen</a></span><ul>
+                                    <li><span class="file"><a href="ch03s04.html#d0e823" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="ch03s04.html#d0e898" tabindex="1">Weiterführende Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s05.html" tabindex="1">Sensordaten aus der Datenbank löschen</a></span></li>
+                              <li><span class="file"><a href="Create.CSV.html" tabindex="1">Eine CSV-Datei erstellen</a></span></li>
+                              <li><span class="file"><a href="ch03s07.html" tabindex="1">WebSense und EnterpriseDB PostgreSQL mit Stackbuilder deinstallieren</a></span><ul>
+                                    <li><span class="file"><a href="ch03s07.html#d0e931" tabindex="1">WebSense deinstallieren</a></span></li>
+                                    <li><span class="file"><a href="ch03s07.html#d0e949" tabindex="1">EnterpriseDB mit Stackbuilder deinstallieren</a></span></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="Problemlösung.html" tabindex="1">Problemlösung</a></span></li>
+                        <li><span class="file"><a href="FAQ.html" tabindex="1">FAQ</a></span></li>
+                        <li><span class="file"><a href="ix01.html" tabindex="1">Stichwortverzeichnis</a></span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div id="searchDiv">
+                  <div id="search">
+                     <form onsubmit="Verifie(searchForm);return false" name="searchForm" class="searchForm">
+                        <fieldset class="searchFieldSet">
+                           <legend>Suchen</legend>
+                           <center><input id="textToSearch" name="textToSearch" type="search" class="searchText" tabindex="1" /> &nbsp; <input onclick="Verifie(searchForm)" type="button" class="searchButton" value="Go" id="doSearch" tabindex="1" /></center>
+                        </fieldset>
+                     </form>
+                  </div>
+                  <div id="searchResults">
+                     <center></center>
+                  </div>
+                  <p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>

@@ -1,0 +1,418 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!DOCTYPE html
+  PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+   <head>
+      
+      <meta http-equiv="X-UA-Compatible" content="IE=7" />
+      
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      
+      <title>Einen Graphen erzeugen</title>
+      <meta name="generator" content="DocBook XSL Stylesheets V1.77.0" />
+      <link rel="home" href="index.html" title="Benutzerhandbuch für WebSense" />
+      <link rel="up" href="Anleitungen.html" title="Anleitungen" />
+      <link rel="prev" href="Create.Heatmap.html" title="Eine Heatmap erzeugen" />
+      <link rel="next" href="ch03s03.html" title="Neue Sensordaten in die Datenbank hochladen" /><script type="text/javascript">
+            //The id for tree cookie
+            var treeCookieId = "treeview-1132";
+            var language = "de";
+            var w = new Object();
+            //Localization
+            txt_filesfound = 'Ergebnisse';
+            txt_enter_at_least_1_char = "Sie müssen mindestens ein Zeichen eingeben.";
+            txt_browser_not_supported = "JavaScript ist in Ihrem Browser abgeschaltet. Bitte schalten Sie JavaScript an, damit diese Seiten vollständig dargestellt werden.";
+            txt_please_wait = "Bitte warten Sie. Die Suche ist im Gange ...";
+            txt_results_for = "Ergebnisse für: ";
+        </script><link rel="shortcut icon" href="../test.png" type="image/x-icon" />
+      <link rel="stylesheet" type="text/css" href="../common/css/positioning.css" />
+      <link rel="stylesheet" type="text/css" href="../common/jquery/theme-redmond/jquery-ui-1.8.2.custom.css" />
+      <link rel="stylesheet" type="text/css" href="../common/jquery/treeview/jquery.treeview.css" /><style type="text/css">
+noscript{
+      font-weight:bold;
+}
+input {
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+.folder {
+    display: block;
+    height: 22px;
+    padding-left: 20px;
+    background: transparent url(../common/jquery/treeview/images/folder.gif) 0 0px no-repeat;
+}
+span.contentsTab {
+    padding-left: 20px;
+    background: url(../common/images/toc-icon.png) no-repeat 0 center;
+}
+span.searchTab {
+    padding-left: 20px;
+    background: url(../common/images/search-icon.png) no-repeat 0 center;
+}
+
+/* Overide jquery treeview's defaults for ul. */
+.treeview ul {
+    background-color: transparent;
+    margin-top: 4px;
+}		
+#webhelp-currentid {
+    background-color: #D8D8D8 !important;
+}
+.treeview .hover { color: black; }
+.filetree li span a { text-decoration: none; font-size: 12px; color: #517291; }
+
+/* Override jquery-ui's default css customizations. These are supposed to take precedence over those.*/
+.ui-widget-content {
+    border: 0px; 
+    background: none; 
+    color: none;     
+}
+.ui-widget-header {
+    color: #e9e8e9;
+    border-left: 1px solid #e5e5e5;
+    border-right: 1px solid #e5e5e5;
+    border-bottom: 1px solid #bbc4c5;
+    border-top: 4px solid #e5e5e5;
+    border: medium none;
+    background: #F4F4F4; /* old browsers */
+    background: -moz-linear-gradient(top, #F4F4F4 0%, #E6E4E5 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F4F4F4), color-stop(100%,#E6E4E5)); /* webkit */    
+    font-weight: none;
+}
+.ui-widget-header a { color: none; }
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default { 
+border: none; background: none; font-weight: none; color: none; }
+.ui-state-default a, .ui-state-default a:link, .ui-state-default a:visited { color: black; text-decoration: none; }
+.ui-state-hover, .ui-widget-content .ui-state-hover, .ui-widget-header .ui-state-hover, .ui-state-focus, .ui-widget-content .ui-state-focus, .ui-widget-header .ui-state-focus { border: none; background: none; font-weight: none; color: none; }
+
+.ui-state-active, .ui-widget-content .ui-state-active, .ui-widget-header .ui-state-active { border: none; background: none; font-weight: none; color: none; }
+.ui-state-active a, .ui-state-active a:link, .ui-state-active a:visited { 
+    color: black; text-decoration: none; 	
+    background: #C6C6C6; /* old browsers */
+    background: -moz-linear-gradient(top, #C6C6C6 0%, #D8D8D8 100%); /* firefox */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#C6C6C6), color-stop(100%,#D8D8D8)); /* webkit */
+    -webkit-border-radius:15px; -moz-border-radius:10px;
+    border: 1px solid #f1f1f1;
+}    
+.ui-corner-all { border-radius: 0 0 0 0; }
+
+.ui-tabs { padding: .2em;}
+.ui-tabs .ui-tabs-nav li { top: 0px; margin: -2px 0 1px; text-transform: uppercase; font-size: 10.5px;}
+.ui-tabs .ui-tabs-nav li a { padding: .25em 2em .25em 1em; margin: .5em; text-shadow: 0 1px 0 rgba(255,255,255,.5); }
+        </style><script type="text/javascript" src="../common/browserDetect.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery-1.4.2.min.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery-ui-1.8.2.custom.min.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/jquery.cookie.js">
+         <!----></script><script type="text/javascript" src="../common/jquery/treeview/jquery.treeview.min.js">
+         <!----></script><script type="text/javascript" src="search/l10n.js">
+         <!----></script><script type="text/javascript" src="search/htmlFileList.js">
+         <!----></script><script type="text/javascript" src="search/htmlFileInfoList.js">
+         <!----></script><script type="text/javascript" src="search/nwSearchFnt.js">
+         <!----></script><script type="text/javascript" src="search/stemmers/de_stemmer.js">
+         <!--//make this scalable to other languages as well.--></script><script type="text/javascript" src="search/index-1.js">
+         <!----></script><script type="text/javascript" src="search/index-2.js">
+         <!----></script><script type="text/javascript" src="search/index-3.js">
+         <!----></script></head>
+   <body>
+      <div id="header"><a target="_blank" href="#"><img style="margin-right: 2px; height: 59px; padding-right: 25px; padding-top: 8px" align="right" src="../common/images/test.png" alt=" Documentation" /></a><h1>Benutzerhandbuch für WebSense<br />Anleitungen
+         </h1>
+         <div id="navheader">
+            <!---->
+            <table class="navLinks">
+               <tr>
+                  <td><a id="showHideButton" href="javascript:showHideToc();" class="pointLeft" tabindex="5" title="Hide TOC tree">Sidebar
+                                                    </a></td>
+                  <td><a accesskey="p" class="navLinkPrevious" tabindex="5" href="Create.Heatmap.html">Zurück</a>
+                                                             |
+                                                             <a accesskey="u" class="navLinkUp" tabindex="5" href="Anleitungen.html">Nach oben</a>
+                                                         |
+                                                         <a accesskey="n" class="navLinkNext" tabindex="5" href="ch03s03.html">Weiter</a></td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="content">
+         <noscript>JavaScript ist in Ihrem Browser abgeschaltet. Bitte schalten Sie JavaScript an, damit diese Seiten vollständig dargestellt
+            werden.
+         </noscript>
+         <!---->
+         <div class="sect1">
+            <div class="titlepage">
+               <div>
+                  <div>
+                     <h2 class="title" style="clear: both"><a id="Create.Graph"></a>Einen Graphen erzeugen
+                     </h2>
+                  </div>
+               </div>
+            </div>
+            <div class="toc">
+               <dl>
+                  <dt><span class="sect2"><a href="Create.Graph.html#d0e629">Anleitung</a></span></dt>
+                  <dt><span class="sect2"><a href="Create.Graph.html#d0e694">Graphen-Optionen</a></span></dt>
+                  <dt><span class="sect2"><a href="Create.Graph.html#d0e754">Beispiel eines Graphen</a></span></dt>
+                  <dt><span class="sect2"><a href="Create.Graph.html#d0e767">Weiterführende Informationen</a></span></dt>
+               </dl>
+            </div><a id="d0e620" class="indexterm"></a><p>In diesem Abschnitt erfahren Sie, wie Sie einen Graphen von einem oder mehreren Sensoren erzeugen können.</p>
+            <div class="sect2">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d0e629"></a>Anleitung
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <div class="informaltable">
+                  <table border="1">
+                     <colgroup>
+                        <col width="2cm" align="center" />
+                        <col />
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th align="center">Schritt</th>
+                           <th>Handlung</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td align="center">
+                              <p>1</p>
+                           </td>
+                           <td>
+                              <p>Wählen Sie einen oder mehrere Standorte in der <span class="emphasis"><em>Liste</em></span> und klicken Sie auf „Standort ändern".
+                              </p>
+                              									
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center">
+                              <p>2</p>
+                           </td>
+                           <td>
+                              <p>Klicken Sie auf die Registerkarte <span class="emphasis"><em>Graphen</em></span>.
+                              </p>
+                              
+                              <p><span class="bold"><strong>Ergebnis:</strong></span> Sie sehen ein Formular, mit dem Sie eine Heatmap erzeugen können. Folgende Optionen werden angezeigt:
+                              </p>
+                              									
+                              <div class="itemizedlist">
+                                 <ul class="itemizedlist" style="list-style-type: disc; ">
+                                    <li class="listitem">
+                                       <p>Zeitintervall</p>
+                                    </li>
+                                    <li class="listitem">
+                                       <p>Sensor nach Typen</p>
+                                    </li>
+                                    <li class="listitem">
+                                       <p>Ausgabeformat</p>
+                                    </li>
+                                 </ul>
+                              </div>
+                              										
+                           </td>
+                        </tr>
+                        <tr>
+                           <td align="center">
+                              <p>3</p>
+                           </td>
+                           <td>
+                              										
+                              										
+                              <p>Klicken Sie auf„Abfragen", um den Graphen zu erzeugen. Sie können Ihre Auswahl rückgängig machen, indem Sie auf „Zurücksetzen"
+                                 klicken.
+                              </p>
+                              
+                              <p><span class="bold"><strong>Ergebnis:</strong></span> Ein neues Fenster mit dem Graphen öffnet sich.
+                              </p>	
+                              										
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="sect2">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d0e694"></a>Graphen-Optionen
+                        </h3>
+                     </div>
+                  </div>
+               </div><a id="d0e697" class="indexterm"></a><div class="informaltable">
+                  <table border="1">
+                     <colgroup>
+                        <col width="3cm" />
+                        <col />
+                     </colgroup>
+                     <thead>
+                        <tr>
+                           <th>Option</th>
+                           <th>Funktion</th>
+                        </tr>
+                     </thead>
+                     <tbody>
+                        <tr>
+                           <td>
+                              <p>Zeitintervall</p>
+                           </td>
+                           <td>
+                              <p>Wenn Sie auf „Festes Datumsintervall" klicken, öffnet sich ein Kalender, in dem Sie ein Start- und Enddatum eingeben können.
+                                 									
+                              </p>
+                              									
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <p>Sensoren nach Typ</p>
+                           </td>
+                           <td>
+                              <p>Die Sensoren sind automatisch nach Art ihrer Messung angeordnet. Um mehr als einen Sensor auszuwählen, halten Sie <span class="emphasis"><em>Strg</em></span> gedrückt, während Sie die gewünschten Sensoren auswählen..
+                              </p>
+                              									
+                           </td>
+                        </tr>
+                        <tr>
+                           <td>
+                              <p>Ausgabeformat</p>
+                           </td>
+                           <td>
+                              <p>Um den Graphen sofort zu sehen, wählen Sie <span class="emphasis"><em>Graph</em></span>. Er öffnet sich in einem neuen Fenster.
+                              </p>
+                              
+                              <p>Sie können ebenfalls eine <span class="emphasis"><em>CSV-Datei</em></span> mit den Daten der ausgewählten Sensoren herunterladen. Dadurch wird ein Datenaustausch erleichtert.
+                              </p>
+                              											
+                              <div class="note" style="margin-left: 0.5in; margin-right: 0.5in;">
+                                 <h3 class="title">Tipp:</h3>
+                                 <p>Sie können die URL des Graphen kopieren und sie jemand anderen schicken. Dadurch kann auch er den Graphen über die URL betrachten.</p>
+                              </div>
+                              									
+                           </td>
+                        </tr>
+                     </tbody>
+                  </table>
+               </div>
+            </div>
+            <div class="sect2">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d0e754"></a>Beispiel eines Graphen
+                        </h3>
+                     </div>
+                  </div>
+               </div><a id="d0e757" class="indexterm"></a><div class="mediaobject"><img src="images/Graphen.jpg" width="486" /></div>
+            </div>
+            <div class="sect2">
+               <div class="titlepage">
+                  <div>
+                     <div>
+                        <h3 class="title"><a id="d0e767"></a>Weiterführende Informationen
+                        </h3>
+                     </div>
+                  </div>
+               </div>
+               <p>Weitere Informationen zur Liste finden Sie in  <a class="xref" href="UserInterface.html" title="Benutzeroberfläche von WebSense"><em>Benutzeroberfläche von WebSense</em></a></p>
+               <p>Weitere Informationen zum Graphen finden Sie in Kapitel 2,  <span class="emphasis"><em><a class="xref" href="Menü2.html" title="Menü 2">„Menü 2“</a></em></span></p>
+            </div>
+         </div><script type="text/javascript" src="../common/main.js">
+            <!----></script><div class="navfooter">
+            <hr />
+            <table width="100%" summary="Navigation footer">
+               <tr>
+                  <td width="40%" align="left"><a accesskey="p" href="Create.Heatmap.html">Zurück</a> 
+                  </td>
+                  <td width="20%" align="center"><a accesskey="u" href="Anleitungen.html">Nach oben</a></td>
+                  <td width="40%" align="right"> <a accesskey="n" href="ch03s03.html">Weiter</a></td>
+               </tr>
+               <tr>
+                  <td width="40%" align="left" valign="top"> </td>
+                  <td width="20%" align="center"><a accesskey="h" href="index.html">Zum Anfang</a></td>
+                  <td width="40%" align="right" valign="top"> </td>
+               </tr>
+            </table>
+         </div>
+      </div>
+      <div id="sidebar">
+         <div id="leftnavigation" style="padding-top:3px;">
+            <div id="tabs">
+               <ul>
+                  <li><a href="#treeDiv" style="outline:0;" tabindex="1"><span class="contentsTab">Inhalt</span></a></li>
+                  <li><a href="#searchDiv" style="outline:0;" tabindex="1" onclick="doSearch()"><span class="searchTab">Suchen</span></a></li>
+               </ul>
+               <div id="treeDiv"><img src="../common/images/loading.gif" alt="loading table of contents..." id="tocLoading" style="display:block;" /><div id="ulTreeDiv" style="display:none">
+                     <ul id="tree" class="filetree">
+                        <li><span class="file"><a href="Introduction.html" tabindex="1">Einführung</a></span><ul>
+                              <li><span class="file"><a href="ch01s01.html" tabindex="1">Über dieses Benutzerhandbuch</a></span></li>
+                              <li><span class="file"><a href="ch01s02.html" tabindex="1">Was ist WebSense?</a></span></li>
+                              <li><span class="file"><a href="ch01s03.html" tabindex="1">Voraussetzungen</a></span></li>
+                              <li><span class="file"><a href="ch01s04.html" tabindex="1">Datenfluss in WebSense</a></span></li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="UserInterface.html" tabindex="1">Benutzeroberfläche von WebSense</a></span><ul>
+                              <li><span class="file"><a href="ch02s01.html" tabindex="1">Überblick</a></span></li>
+                              <li><span class="file"><a href="ch02s02.html" tabindex="1">Hauptmenü</a></span></li>
+                              <li><span class="file"><a href="Menü2.html" tabindex="1">Menü 2</a></span></li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="Anleitungen.html" tabindex="1">Anleitungen</a></span><ul>
+                              <li><span class="file"><a href="Create.Heatmap.html" tabindex="1">Eine Heatmap erzeugen</a></span><ul>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e462" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e527" tabindex="1">Heatmap-Optionen</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e584" tabindex="1">Beispiel einer Heatmap</a></span></li>
+                                    <li><span class="file"><a href="Create.Heatmap.html#d0e606" tabindex="1">Weiterführene Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li id="webhelp-currentid"><span class="file"><a href="Create.Graph.html" tabindex="1">Einen Graphen erzeugen</a></span><ul>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e629" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e694" tabindex="1">Graphen-Optionen</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e754" tabindex="1">Beispiel eines Graphen</a></span></li>
+                                    <li><span class="file"><a href="Create.Graph.html#d0e767" tabindex="1">Weiterführende Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s03.html" tabindex="1">Neue Sensordaten in die Datenbank hochladen</a></span><ul>
+                                    <li><span class="file"><a href="ch03s03.html#d0e788" tabindex="1">Voraussetzungen:</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s04.html" tabindex="1">Ein Back-Up der Daten durchführen</a></span><ul>
+                                    <li><span class="file"><a href="ch03s04.html#d0e812" tabindex="1">Anleitung</a></span></li>
+                                    <li><span class="file"><a href="ch03s04.html#d0e887" tabindex="1">Weitergehende Informationen</a></span></li>
+                                 </ul>
+                              </li>
+                              <li><span class="file"><a href="ch03s05.html" tabindex="1">Sensordaten aus der Datenbank löschen</a></span></li>
+                              <li><span class="file"><a href="Create.CSV.html" tabindex="1">Eine CSV-Datei erstellen</a></span></li>
+                              <li><span class="file"><a href="ch03s07.html" tabindex="1">WebSense und EnterpriseDB PostgreSQL mit Stackbuilder deinstallieren</a></span><ul>
+                                    <li><span class="file"><a href="ch03s07.html#d0e920" tabindex="1">WebSense deinstallieren</a></span></li>
+                                    <li><span class="file"><a href="ch03s07.html#d0e938" tabindex="1">EnterpriseDB mit Stackbuilder deinstallieren</a></span></li>
+                                 </ul>
+                              </li>
+                           </ul>
+                        </li>
+                        <li><span class="file"><a href="Problemlösung.html" tabindex="1">Problemlösung</a></span></li>
+                        <li><span class="file"><a href="FAQ.html" tabindex="1">FAQ</a></span></li>
+                        <li><span class="file"><a href="ix01.html" tabindex="1">Stichwortverzeichnis</a></span></li>
+                     </ul>
+                  </div>
+               </div>
+               <div id="searchDiv">
+                  <div id="search">
+                     <form onsubmit="Verifie(searchForm);return false" name="searchForm" class="searchForm">
+                        <fieldset class="searchFieldSet">
+                           <legend>Suchen</legend>
+                           <center><input id="textToSearch" name="textToSearch" type="search" class="searchText" tabindex="1" /> &nbsp; <input onclick="Verifie(searchForm)" type="button" class="searchButton" value="Go" id="doSearch" tabindex="1" /></center>
+                        </fieldset>
+                     </form>
+                  </div>
+                  <div id="searchResults">
+                     <center></center>
+                  </div>
+                  <p class="searchHighlight"><a href="#" onclick="toggleHighlight()">Search Highlighter (On/Off)</a></p>
+               </div>
+            </div>
+         </div>
+      </div>
+   </body>
+</html>
