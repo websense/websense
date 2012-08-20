@@ -22,6 +22,7 @@ $all_messages = array(
             'banner.navigation.publications' => 'Publications',
             'banner.navigation.downloads' => 'Downloads',
             'banner.navigation.contact' => 'Contact',
+            'banner.navigation.help' => 'Help',
             
             // contact.php
             
