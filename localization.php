@@ -26,7 +26,7 @@ $all_messages = array(
             
             // contact.php
             
-            'contact.title' => 'Websense3 - Contact',
+            'contact.title' => 'WebSense3 - Contact',
             'contact.paragraph.1' => 'This application is based on
 						a Java-based WebSense application developed at the
 						Hochschule Mannheim, Germany.',
@@ -40,7 +40,7 @@ $all_messages = array(
             
             // downloads.php
             
-            'downloads.title' => 'Websense3 - Downloads and Documentation',
+            'downloads.title' => 'WebSense3 - Downloads and Documentation',
             'downloads.used.software' => 'Used 3rd Party Software',
             'downloads.apache.web.server' => 'Apache Web Server',
             'downloads.postgresql' => 'PostgreSQL Database',
@@ -54,7 +54,7 @@ $all_messages = array(
             'downloads.tba' => 'TBA',
             
             // index.php
-            'index.title' => 'Websense3',
+            'index.title' => 'WebSense3',
             'index.tabs.overview' => 'Overview',
             'index.tabs.event.history' => 'Event History',
             'index.tabs.phenomena' => 'Phenomena',
@@ -68,9 +68,9 @@ $all_messages = array(
 		'help.help.title' => 'Help Documentation for WebSense',
 		'help.online.help.en' => 'Online Help for WebSense',
 		'help.online.help.ger' => 'Online-Hilfe für WebSense',
-		'help.user.guide.ger' => 'Benutzerhandbuch im PDF-Format',
+		'help.user.guide.ger' => 'Benutzerhandbuch als PDF',
 		'help.user.guide.en' => 'User Guide as PDF',
-		'help.intro' => 'You can either open the Online-Help in your Browser or download
+		'help.intro' => 'You can either open the Online-Help in your web browser or download
 				 a PDF. Both are available in English and German.',
 		'help.intro.2' => 'The PDF contains the complete documentation including the 
 				installation instructions.',
@@ -89,8 +89,8 @@ $all_messages = array(
             'opendb.error' => 'Cannot connect to test database. Try editing opendb.php to set the real database.',
             
             // publications.php
-            'publications.title' => 'Websense3 - Publications',
-            'publications.overview' => 'Websense Overview',
+            'publications.title' => 'WebSense3 - Publications',
+            'publications.overview' => 'WebSense Overview',
             'publications.deployments' => 'Sensor Network Deployments',
             
             // create_graph.php
@@ -223,8 +223,8 @@ $all_messages = array(
             
             // contact.php
             
-           'contact.title' => 'Websense3 - Kontakt',
-		'contact.paragraph.1' => 'Grundlage der Anwendung ist eine Java-basierte Websense-Anwendung, 
+           'contact.title' => 'WebSense3 - Kontakt',
+		'contact.paragraph.1' => 'Grundlage der Software ist eine Java-basierte WebSense-Anwendung, 
 		die an der Hochschule Mannheim entwickelt wurde.',
 		'contact.paragraph.2' => 'Folgende Personen haben an den Versionen des Systems und der
 		Datenbank mitgewirkt:',
@@ -234,8 +234,8 @@ $all_messages = array(
             
             // downloads.php
             
-            'downloads.title' => 'Websense3 - Download und Dokumentation',
-		'downloads.used.software' => 'Zusätzlich benutzte Software',
+            'downloads.title' => 'WebSense3 - Download und Dokumentation',
+		'downloads.used.software' => 'Zusätzlich verwendete Software',
 		'downloads.apache.web.server' => 'Apache-Webserver',
 		'downloads.postgresql' => 'PostgreSQL-Datenbank',
 		'downloads.jquery' => 'jQuery',
@@ -264,7 +264,7 @@ $all_messages = array(
 		'help.list.english' => 'Englisch',
             
             // index.php
-           'index.title' => 'Websense3',
+           'index.title' => 'WebSense3',
 		'index.tabs.overview' => 'Überblick',
 		'index.tabs.event.history' => 'Verlaufsdaten',
 		'index.tabs.phenomena' => 'Messdaten',
@@ -274,48 +274,52 @@ $all_messages = array(
 		'index.tabs.heat.map' => 'Heatmap',
             
             // menu.php
-           'menu.no.trials' => 'Es sind (noch) keine Messdaten zur Auswahl vorhanden.',
-		'menu.info.paragraph.1' => 'Wählen Sie einen oder mehrere Standorte aus der unteren Liste und klicken Sie auf "Standort ändern".',
-		'menu.info.paragraph.2' => 'Die Messdaten können dann durch die Reiter des mittleren Menüs abgefragt werden.',
+
+           'menu.no.trials' => 'Es sind (noch) keine Standpunkte zur Auswahl vorhanden.',
+		'menu.info.paragraph.1' => 'Wählen Sie einen oder mehrere Standorte aus der unteren Liste und klicken Sie auf „Standort ändern".',
+		'menu.info.paragraph.2' => 'Die Messdaten können dann durch die Registerkarten des mittleren Menüs abgefragt werden.',
 		'menu.buttons.checkall' => 'Alle',
 		'menu.buttons.uncheckall' => 'Keiner',
 		'menu.buttons.submit' => 'Standort ändern',
             
             // opendb.php
             'opendb.error' => 'Verbindung zur Datenbank ist nicht möglich. 
-            Öffnen Sie die Datei "opendb.php", um die richtige Datenbank einzutragen.',
+            Öffnen Sie die Datei „opendb.php", um die richtige Datenbank einzutragen.',
             
             // publications.php
-            'publications.title' => 'Websense3 - Veröffentlichungen',
-		'publications.overview' => 'Websense-Überblick',
+            'publications.title' => 'WebSense3 - Veröffentlichungen',
+		'publications.overview' => 'WebSense-Überblick',
 		'publications.deployments' => 'Einsätze des Sensor-Netzwerkes',
             
             // create_graph.php
-           'create.graph.error.generic' => 'Wählen Sie einen oder mehrere Sensoren zur Betrachtung aus und wählen Sie das Ausgabeformat.',
-		'create.graph.error.query.enddate' => 'Fehler beim Ausführen der Abfrage "Enddatum".',
-		'create.graph.error.query.startdate' => 'Fehler beim Ausführen der Abfrage "Startdatum".',
+
+           'create.graph.error.generic' => 'Wählen Sie einen oder mehrere Sensorknoten zur Betrachtung aus und wählen Sie das Ausgabeformat.',
+		'create.graph.error.query.enddate' => 'Fehler beim Ausführen der Abfrage „Enddatum".',
+		'create.graph.error.query.startdate' => 'Fehler beim Ausführen der Abfrage „Startdatum".',
 		'create.graph.error.date.interval.missing' => 'Bitte geben Sie das genaue Datumsintervall an.',
-		'create.graph.error.query.num.days' => 'Fehler beim Ausführen der Abfrage "numday".',
-		'create.graph.error.query.name' => 'Fehler beim Ausführen der Abfrage "Name".',
-		'create.graph.error.query.csv' => 'Fehler beim Ausführen der Abfrage "csv".',
+		'create.graph.error.query.num.days' => 'Fehler beim Ausführen der Abfrage „num day".',
+		'create.graph.error.query.name' => 'Fehler beim Ausführen der Abfrage „Name".',
+		'create.graph.error.query.csv' => 'Fehler beim Ausführen der Abfrage „CSV".',
 		'create.graph.graph.title' => 'Sensordaten für {trialname} von {startdate} bis {enddate}',
-		'create.graph.error.query.time.wert' => 'Fehler beim Ausführen der Abfrage "Zeit-Wert-Graph".',
+		'create.graph.error.query.time.wert' => 'Fehler beim Ausführen der Abfrage „Zeit-Wert-Graph".',
             
             // create_heat_map.php
-            'create.heat.map.error.query.main' => 'Fehler beim Ausführen der Abfrage "Heatmap".',
-		'create.heat.map.error.query.phenomenon' => 'Fehler beim Auführen der Abfrage "Messdaten".',
+            'create.heat.map.error.query.main' => 'Fehler beim Ausführen der Abfrage „Heatmap".',
+		'create.heat.map.error.query.phenomenon' => 'Fehler beim Auführen der Abfrage „Messdaten".',
             
             // event_history.php
+
            'event.history.multiple.trials.selected' => 'Für weitere Informationen betrachten Sie die einzelnen Netzwerke.',
-		'event.history.error.query.blog' => 'Fehler beim Ausführen der Abfrage "Blog".',
-		'event.history.no.events' => 'Für diese Testdaten sind keine Ereignisse aufgezeichnet.',
+		'event.history.error.query.blog' => 'Fehler beim Ausführen der Abfrage „Blog".',
+		'event.history.no.events' => 'Für diese(n) Standort(e) sind keine Ereignisse aufgezeichnet.',
             
             // get_params.php
-            'get.params.missing.params' => 'Ungültige Anfrage für "GET". "Testdaten" oder "Testdaten[]" müssen festgelegt sein.',
+            'get.params.missing.params' => 'Ungültige Anfrage für "GET". "Standorte" oder "Standorte[]" müssen festgelegt sein.',
             
             // graphs.php
-            'graphs.error.query.dates' => 'Fehler beim Ausführen der Abfrage "Datum".',
-		'graphs.no.measurements' => 'Es sind noch keine Messdaten vorhanden.',
+
+            'graphs.error.query.dates' => 'Fehler beim Ausführen der Abfrage „Datum".',
+		'graphs.no.measurements' => 'Es sind noch keine Messungen aufgezeichnet wurden.',
 		'graphs.form.time.interval' => 'Wählen Sie das Zeitintervall',
 		'graphs.form.last.24h' => 'Letzten 24 Stunden',
 		'graphs.form.last.7d' => 'Letzten 7 Tage',
@@ -326,7 +330,7 @@ $all_messages = array(
 		'graphs.form.fixed.interval' => 'Festes Datumsintervall...',
 		'graphs.form.date.start' => 'Startdatum:',
 		'graphs.form.date.end' => 'Enddatum:',
-		'graphs.form.by.type' => 'Wählen Sie die Sensoren nach Typ',
+		'graphs.form.by.type' => 'Wählen Sie die Zeitreihe der Sensoren nach Typ',
 		'graphs.form.output' => 'Wählen Sie das Ausgabeformat',
 		'graphs.form.output.graph' => 'Graph (öffnet sich in einem neuen Fenster)',
 		'graphs.form.output.csv' => 'Als CSV-Datei',
@@ -334,35 +338,38 @@ $all_messages = array(
 		'graphs.form.reset' => 'Zurücksetzen',
             
             // heat_map.php
-            'heat.map.error.query.date' => 'Fehler beim Ausführen der Abfrage "Datum".',
-		'heat.map.error.query.no.measurements' => 'Es sind noch keine Messdaten vorhanden.',
-		'heat.map.error.query.phenomena' => 'Fehler beim Ausführen der Abfrage "Messdaten".',
-		'heat.map.error.query.depth' => 'Fehler beim Ausführen der Abfrage "Tiefe".',
+            
+            'heat.map.error.query.date' => 'Fehler beim Ausführen der Abfrage „Datum".',
+		'heat.map.error.query.no.measurements' => 'Es sind noch keine Messungen aufgezeichnet wurden.',
+		'heat.map.error.query.phenomena' => 'Fehler beim Ausführen der Abfrage „Messdaten".',
+		'heat.map.error.query.depth' => 'Fehler beim Ausführen der Abfrage „Tiefe".',
 		'heat.map.form.time.of.measurement' => 'Wählen Sie die Zeit der Messung',
 		'heat.map.form.date' => 'Datum',
 		'heat.map.form.hour.of.day' => 'Stunde des Tages (0-23, Format: "HH"):',
 		'heat.map.form.include.minutes' => 'inklusive folgender Minuten:',
-		'heat.map.form.select.phenomenon' => 'Wählen Sie die Art der Messung',
+		'heat.map.form.select.phenomenon' => 'Wählen Sie die Messart',
 		'heat.map.form.depth.in.centimeters' => 'Wählen Sie die Tiefe in Zentimeter',
 		'heat.map.form.submit' => 'Abfragen',
 		'heat.map.form.reset' => 'Zurücksetzen',
 		'heat.map.scale.toggle.popup' => 'Umschalten der relativen Skala (Sensorwerte relativ zueinander gesehen) an/aus',
-		'heat.map.spectrum.alt' => 'Farbreichweite der Heatmap von minimum bis maximum.',
+		'heat.map.spectrum.alt' => 'Farbreichweite der Heatmap von Minimum bis Maximum.',
             
             // overview.php
-            'overview.error.query.node' => 'Fehler beim Ausführen der Abfrage "Sensor-ID".',
-		'overview.error.query.count' => 'Fehler beim Ausführen der Abfrage "Anzahl der Sensoren".',
-		'overview.error.query.trial.info' => 'Fehler beim Ausführen der Abfrage "Informationen zu Messdaten".',
-		'overview.num.nodes' => 'Anzahl der Sensoren',
+
+            'overview.error.query.node' => 'Fehler beim Ausführen der Abfrage „Sensorknoten-ID".',
+		'overview.error.query.count' => 'Fehler beim Ausführen der Abfrage „Anzahl der Sensorenknoten".',
+		'overview.error.query.trial.info' => 'Fehler beim Ausführen der Abfrage „Informationen zu Standorten".',
+		'overview.num.nodes' => 'Anzahl der Sensorknoten',
 		'overview.total.measurements' => 'Messung gesamt',
 		'overview.observation.first' => 'Erste Messung',
 		'overview.observation.last' => 'Letzte Messung',
 		'overview.contact.address' => 'Kontaktadresse',
             
             // phenomena.php
-            	'phenomena.error.query.phenomena' => 'Fehler beim Ausführen der Abfrage "Messdaten".',
-		'phenomena.no.phenomena' => 'Bisher sind keine Messdaten von den Sensoren erfasst worden.',
-		'phenomena.table.phenomenon' => 'Art der Messung',
+
+            	'phenomena.error.query.phenomena' => 'Fehler beim Ausführen der Abfrage „Messdaten".',
+		'phenomena.no.phenomena' => 'Bisher sind keine Messdaten an diesem Standort erfasst worden.',
+		'phenomena.table.phenomenon' => 'Messart',
 		'phenomena.table.unit' => 'Einheit',
             
             'phenomena.table.minimum' => 'Min. Einschränkung',
@@ -371,10 +378,11 @@ $all_messages = array(
             'phenomena.table.calibration' => 'Kalibrierung',
             
             // sensor_health.php
-           'sensor.health.error.query.main' => 'Fehler beim Ausführen Abfrage "Sensorzustand".',
+
+           'sensor.health.error.query.main' => 'Fehler beim Ausführen Abfrage „Sensorzustand".',
 		'sensor.health.no.data' => 'Bisher sind keine Daten von den Sensoren erfasst worden.',
 		'sensor.health.table.sensor' => 'Sensor',
-		'sensor.health.table.measurement' => 'Messung',
+		'sensor.health.table.measurement' => 'Messart',
 		'sensor.health.table.value' => 'Wert',
 		'sensor.health.table.unit' => 'Einheit',
 		'sensor.health.table.measurement.last' => 'Letzte Messung',
@@ -382,14 +390,16 @@ $all_messages = array(
 		'sensor.health.table.popup.last.24h' => 'Letzten 24 Stunden',
             
             // sensors.php
-           'sensors.error.query.sensordevice' => 'Fehler beim Ausführen der Abfrage "Sensortyp".',
-		'sensors.error.no.sensor.types' => 'Kein bekannter Sensor wird für diese(n) Standort(e) verwendet.',
+
+           'sensors.error.query.sensordevice' => 'Fehler beim Ausführen der Abfrage „Sensortyp".',
+		'sensors.error.no.sensor.types' => 'Kein bekannter Sensortyp wird für diese(n) Standort(e) verwendet.',
 		'sensors.table.description' => 'Beschreibung',
 		'sensors.table.calibration' => 'Kalibrierung',
 		'sensors.table.measurement.method' => 'Messmethode',
 		'sensors.table.datasheet' => 'Datenblatt',
             
             // testgraph.php
+
             'testgraph.title' => 'Graph zur Überprüfung der jpgraph-Bibliothek und der Links.',
 		'testgraph.pressure' => 'Druck '
         ),
