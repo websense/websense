@@ -14,9 +14,9 @@ span.off     {  }
 
 div.note {	
  	padding: 6px;
- 	border-left:solid 3px #004499;	
+ 	border: 2px solid #FFBB22;
+	border-radius: 10px 10px 10px 10px;
  }
-
 
 body { font: 12px Verdana, Geneva, sans-serif; }
 p, ul, ol, li { font: 10pt Verdana, Geneva, sans-serif; }
