@@ -262,31 +262,14 @@ img {
 	width: 570px;
 	padding: 3px;
 	margin: 10px 0 0 0;
-	/*overflow: hidden;*/
 }
 
-dl {
-	margin: 0;
-	padding: 0;
-	overflow: hidden;
+#info td, #info th {
+    border: medium none;
+    text-align: left;
 }
-
-dt {
-	width: 11em;
-	font-weight: bold;
-	float: left;
-	clear: left;
-	margin: 0;
-	padding: 0 .5em 0 0;
-}
-
-dd {
-	margin: 0;
-	padding: 0;
-}
-
-dt:after {
-	content: ":";
+#info table {
+    width: 100%;
 }
 
 #graphs_container,#heat_map_container {

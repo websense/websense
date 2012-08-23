@@ -116,22 +116,28 @@ $info = pg_fetch_object($info_result);
 $html_content = '
 <div id="map_canvas"></div>
 <div id="info" class="info-box">
-	<dl>
-		<dt>'.$messages['overview.num.nodes'].'</dt>
-		<dd>' . pg_fetch_object($num_nodes_result) -> num_nodes . '</dd>
-	
-		<dt>'.$messages['overview.total.measurements'].'</dt>
-		<dd>' . $info -> total_measurements . '</dd>
-	
-		<dt>'.$messages['overview.observation.first'].'</dt>
-		<dd>' . $info -> firstdate . '</dd>
-	
-		<dt>'.$messages['overview.observation.last'].'</dt>
-		<dd>' . $info -> lastdate . '</dd>
-	
-		<dt>'.$messages['overview.contact.address'].'</dt>
-		<dd>' . $contact . '</dd>
-	</dl>
+	<table>
+		<tr>
+			<th>'.$messages['overview.num.nodes'].':</th>
+			<td>'. pg_fetch_object($num_nodes_result) -> num_nodes .'</td>
+		</tr>
+		<tr>
+			<th>'.$messages['overview.total.measurements'].':</th>
+			<td>'. $info -> total_measurements .'</td>
+		</tr>
+		<tr>
+			<th>'.$messages['overview.observation.first'].':</th>
+			<td>'. $info -> firstdate .'</td>
+		</tr>
+		<tr>
+			<th>'.$messages['overview.observation.last'].':</th>
+			<td>'. $info -> lastdate .'</td>
+		</tr>
+		<tr>
+			<th>'.$messages['overview.contact.address'].':</th>
+			<td>'. $contact .'</td>
+		</tr>
+	</table>
 </div>';
 
 $site_info['html'] = $html_content;
