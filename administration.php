@@ -33,23 +33,17 @@ require 'localization.php';
 			<h4>
 				<?php echo $messages['administration.form.trials.title'] ?>
 			</h4>
-			<img
+			<img class="image-button"
 				alt="<?php echo $messages['administration.form.trials.add.title'] ?>"
 				title="<?php echo $messages['administration.form.trials.add.title'] ?>"
-				src="images/Add.png"> <img
+				src="images/Add.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.trials.edit.title'] ?>"
 				title="<?php echo $messages['administration.form.trials.edit.title'] ?>"
-				src="images/Edit.png"> <img
+				src="images/Edit.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.trials.remove.title'] ?>"
 				title="<?php echo $messages['administration.form.trials.remove.title'] ?>"
 				src="images/Remove.png">
 			<ul>
-				<li>Standort</li>
-				<li>Standort</li>
-				<li>Standort</li>
-				<li>Standort</li>
-				<li>Standort</li>
-				<li>Standort</li>
 			</ul>
 		</div>
 
@@ -57,26 +51,17 @@ require 'localization.php';
 			<h4>
 				<?php echo $messages['administration.form.nodes.title'] ?>
 			</h4>
-			<img
+			<img class="image-button"
 				alt="<?php echo $messages['administration.form.nodes.add.title'] ?>"
 				title="<?php echo $messages['administration.form.nodes.add.title'] ?>"
-				src="images/Add.png"> <img
+				src="images/Add.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.nodes.edit.title'] ?>"
 				title="<?php echo $messages['administration.form.nodes.edit.title'] ?>"
-				src="images/Edit.png"> <img
+				src="images/Edit.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.nodes.remove.title'] ?>"
 				title="<?php echo $messages['administration.form.nodes.remove.title'] ?>"
 				src="images/Remove.png">
 			<ul>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
-				<li>Sensorknoten</li>
 			</ul>
 		</div>
 
@@ -84,23 +69,17 @@ require 'localization.php';
 			<h4>
 				<?php echo $messages['administration.form.sensors.title'] ?>
 			</h4>
-			<img
+			<img class="image-button"
 				alt="<?php echo $messages['administration.form.sensors.add.title'] ?>"
 				title="<?php echo $messages['administration.form.sensors.add.title'] ?>"
-				src="images/Add.png"> <img
+				src="images/Add.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.sensors.edit.title'] ?>"
 				title="<?php echo $messages['administration.form.sensors.edit.title'] ?>"
-				src="images/Edit.png"> <img
+				src="images/Edit.png"> <img class="image-button"
 				alt="<?php echo $messages['administration.form.sensors.remove.title'] ?>"
 				title="<?php echo $messages['administration.form.sensors.remove.title'] ?>"
 				src="images/Remove.png">
 			<ul>
-				<li>Sensor</li>
-				<li>Sensor</li>
-				<li>Sensor</li>
-				<li>Sensor</li>
-				<li>Sensor</li>
-				<li>Sensor</li>
 			</ul>
 		</div>
 

@@ -22,6 +22,10 @@
 	margin-left: 2em;
 }
 
+.image-button {
+	cursor: pointer;
+}
+
 .selected {
 	background-color: #ddd;
 }
