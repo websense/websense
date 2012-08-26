@@ -63,19 +63,32 @@ $all_messages = array(
             'index.tabs.sensor.health' => 'Sensor Health',
             'index.tabs.heat.map' => 'Heat Map',
             
-            //help.php
-		'help.title' => 'Help Documentation for WebSense',
-		'help.help.title' => 'Help Documentation for WebSense',
-		'help.online.help.en' => 'Online Help for WebSense',
-		'help.online.help.ger' => 'Online-Hilfe für WebSense',
-		'help.user.guide.ger' => 'Benutzerhandbuch als PDF',
-		'help.user.guide.en' => 'User Guide as PDF',
-		'help.intro' => 'You can either open the Online-Help in your web browser or download
-				 a PDF. Both are available in English and German.',
-		'help.intro.2' => 'The PDF contains the complete documentation including the 
-				installation instructions.',
-		'help.list.german' => 'German',
-		'help.list.english' => 'English',
+            // administration.php
+            'administration.form.trials.title' => 'Trials',
+            'administration.form.trials.add.title' => 'Add trial',
+            'administration.form.trials.edit.title' => 'Edit selected trial',
+            'administration.form.trials.remove.title' => 'Remove selected trial',
+            'administration.form.nodes.title' => 'Nodes',
+            'administration.form.nodes.add.title' => 'Add node to selected trial',
+            'administration.form.nodes.edit.title' => 'Edit selected node',
+            'administration.form.nodes.remove.title' => 'Remove selected node',
+            'administration.form.sensors.title' => 'Sensors',
+            'administration.form.sensors.add.title' => 'Add sensor to selected node',
+            'administration.form.sensors.edit.title' => 'Edit selected sensor',
+            'administration.form.sensors.remove.title' => 'Remove selected sensor',
+
+
+            // help.php
+            'help.title' => 'Help Documentation for WebSense',
+            'help.help.title' => 'Help Documentation for WebSense',
+            'help.online.help.en' => 'Online Help for WebSense',
+            'help.online.help.ger' => 'Online-Hilfe für WebSense',
+            'help.user.guide.ger' => 'Benutzerhandbuch als PDF',
+            'help.user.guide.en' => 'User Guide as PDF',
+            'help.intro' => 'You can either open the Online-Help in your web browser or download a PDF. Both are available in English and German.',
+            'help.intro.2' => 'The PDF contains the complete documentation including the installation instructions.',
+            'help.list.german' => 'German',
+            'help.list.english' => 'English',
             
             // menu.php
             'menu.no.trials' => 'There are no trials (yet) to select.',

@@ -1,0 +1,27 @@
+#admin-wrapper {
+	overflow: auto;
+}
+
+#admin-node-block ul,#admin-sensor-block ul,#admin-trial-block ul {
+	border: 1px solid black;
+	border-radius: 7px;
+	list-style: none outside none;
+	margin: 0;
+	padding: 0.5em;
+}
+
+#admin-node-block li,#admin-sensor-block li,#admin-trial-block li {
+	cursor: default;
+}
+
+#admin-node-block,#admin-sensor-block,#admin-trial-block {
+	float: left;
+}
+
+#admin-node-block,#admin-sensor-block {
+	margin-left: 2em;
+}
+
+.selected {
+	background-color: #ddd;
+}
