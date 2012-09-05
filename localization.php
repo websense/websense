@@ -85,8 +85,10 @@ $all_messages = array(
             'help.online.help.ger' => 'Online-Hilfe für WebSense',
             'help.user.guide.ger' => 'Benutzerhandbuch als PDF',
             'help.user.guide.en' => 'User Guide as PDF',
-            'help.intro' => 'You can either open the Online-Help in your web browser or download a PDF. Both are available in English and German.',
-            'help.intro.2' => 'The PDF contains the complete documentation including the installation instructions.',
+				'help.tutorial' => 'Tutorial',
+				'help.csv.ger' => 'Beispiel einer CSV-Datei',
+				'help.csv.en' => 'Sample CSV File',
+            'help.intro' => 'Note that the user guide contains the complete documentation including the installation instructions.',
             'help.list.german' => 'German',
             'help.list.english' => 'English',
             
@@ -233,6 +235,20 @@ $all_messages = array(
 		'banner.navigation.downloads' => 'Downloads',
 		'banner.navigation.contact' => 'Kontakt',
 		'banner.navigation.help' => 'Hilfe',
+		
+		// administration.php
+            'administration.form.trials.title' => 'Standorte',
+            'administration.form.trials.add.title' => 'Standort hinzufügen',
+            'administration.form.trials.edit.title' => 'Ausgewählten Standort bearbeiten',
+            'administration.form.trials.remove.title' => 'Ausgewählten Standort entfernen',
+            'administration.form.nodes.title' => 'Sensorknoten',
+            'administration.form.nodes.add.title' => 'Sensorknoten einem ausgewählten Standort hinzufügen',
+            'administration.form.nodes.edit.title' => 'Ausgewählten Sensorknoten bearbeiten',
+            'administration.form.nodes.remove.title' => 'Ausgewählten Sensorknoten entfernen',
+            'administration.form.sensors.title' => 'Sensoren',
+            'administration.form.sensors.add.title' => 'Sensor einem ausgewählten Sensorknoten hinzufügen',
+            'administration.form.sensors.edit.title' => 'Ausgewählten Sensor bearbeiten',
+            'administration.form.sensors.remove.title' => 'Ausgewählten Sensor entfernen',
             
             // contact.php
             
@@ -264,15 +280,16 @@ $all_messages = array(
 		
 		'help.title' => 'Benutzerdokumentation für WebSense',
 		'help.help.title' => 'Benutzerdokumentation für WebSense',
-		'help.intro' => 'Hier finden Sie eine Online-Hilfe sowie ein
-				 Benutzerhandbuch im PDF-Format',
-		'help.intro.2' => 'Die komplette Dokumentation inklusive der Installationsanleitung 
-				ist nur in der PDf enthalten. Beide Hilfedokumentationen werden in 
-				deutscher und englischer Sprache angeboten. ',
+		'help.intro' => 'Hinweis: Die komplette Dokumentation inklusive der Installationsanleitung 
+				ist nur im Benutzerhandbuch enthalten.',
 		'help.online.help.en' => 'Online Help for WebSense',
 		'help.online.help.ger' => 'Online-Hilfe für WebSense',
 		'help.user.guide.ger' => 'Benutzerhandbuch im PDF-Format',
 		'help.user.guide.en' => 'User Guide as PDF',
+		'help.tutorial' => 'Tutorial',
+		'help.csv.en' => 'Sample CSV File',
+		'help.csv.ger' => 'Beispiel einer CSV-Datei',
+		'help.csv.en' => 'Sample CSV File',
 		'help.list.german' => 'Deutsch',
 		'help.list.english' => 'Englisch',
             
@@ -385,8 +402,8 @@ $all_messages = array(
 		'phenomena.table.phenomenon' => 'Messart',
 		'phenomena.table.unit' => 'Einheit',
             
-            'phenomena.table.minimum' => 'Min. Einschränkung',
-            'phenomena.table.maximum' => 'Max. Einschränkung',
+            'phenomena.table.minimum' => 'Min. Begrenzung',
+            'phenomena.table.maximum' => 'Max. Begrenzung',
             
             'phenomena.table.calibration' => 'Kalibrierung',
             

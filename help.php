@@ -23,11 +23,8 @@ require 'localization.php';
 		<?php 
 		require 'banner.php';
 		?>
-		<p>
-			<?php echo $messages['help.intro'] ?>
-		</p>
 		<p> 
-			<?php echo $messages['help.intro.2'] ?>
+			<?php echo $messages['help.intro'] ?>
 		</p>
 		<h4 class="rounded-corners"><?php echo $messages['help.help.title'] ?></h4>
 		<p>
@@ -35,10 +32,16 @@ require 'localization.php';
 		</p>
 			<ul>
 			<li>
-				<a href="javascript:void(window.open('Help_Documentation/German/index.html','example','width=auto, height=auto, location=no, 					menubar=no, status=no, toolbar=yes, scrollbars=yes, resizable=yes, left=600,top=50'))"><?php echo $messages['help.online.help.ger'] ?></a>
+				<a href="javascript:void(window.open('Help_Documentation/German/index.html','width=auto, height=auto'))"><?php echo $messages['help.online.help.ger'] ?></a>
 			</li> 
 			<li>
 				<a href="Help_Documentation/German/Benutzerhandbuch.pdf"><?php echo $messages['help.user.guide.ger'] ?></a>
+			</li>
+			<li>
+				<a href="Help_Documentation/German/Tutorial_de.pdf"><?php echo $messages['help.tutorial'] ?></a>
+			</li>
+			<li>
+				<a href="Help_Documentation/NewData"><?php echo $messages['help.csv.ger'] ?></a>
 			</li>
 			</ul>
 		<p>
@@ -46,10 +49,17 @@ require 'localization.php';
 		</p> 
 			<ul>
 			<li>
-				<a href="javascript:void(window.open('Help_Documentation/English/index.html','example','width=auto, height=auto, location=no, 					menubar=no, status=no, toolbar=yes, scrollbars=yes, resizable=yes, left=600,top=50'))"><?php echo $messages['help.online.help.en'] ?></a>
+				<a href="javascript:void(window.open('Help_Documentation/English/index.html','width=auto, height=auto'))"><?php echo $messages['help.online.help.en'] ?></a>
 			</li>
 			<li>
 				<a href="Help_Documentation/English/UserGuide.pdf"><?php echo $messages['help.user.guide.en'] ?></a> 
+			</li>
+			</li>
+			<li>
+				<a href="Help_Documentation/English/Tutorial_en.pdf"><?php echo $messages['help.tutorial'] ?></a>
+			</li>
+			<li>
+				<a href="Help_Documentation/NewData"><?php echo $messages['help.csv.en'] ?></a>
 			</li>
 			</ul>
 	</body>
